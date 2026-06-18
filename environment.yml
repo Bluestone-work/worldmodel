@@ -1,0 +1,23 @@
+# Conda environment for server training.
+#
+# This file creates the base interpreter only. Python packages are installed
+# via pip from requirements-server.txt (clean, server-deployable dependencies).
+#
+# Usage on the server:
+#   conda env create -f environment.yml
+#   conda activate us_microbot
+#   pip install -r requirements-server.txt
+#
+# GPU notes:
+#   - JAX uses jax-cuda12-plugin (server needs NVIDIA driver compatible with CUDA 12.x)
+#   - PyTorch auto-detects CUDA; specify --index-url if server CUDA differs
+#   - dreamerv3 is the Pippo809 fork; if `import dreamerv3` fails on missing
+#     configs.yaml, see README / CLAUDE.md (the fork can install incompletely)
+name: us_microbot
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  # All Python packages installed via: pip install -r requirements-server.txt
