@@ -24,6 +24,26 @@ pip install -r requirements-server.txt
 
 **注意**: 安装过程可能需要10-20分钟，特别是编译JAX和PyTorch的CUDA扩展时。
 
+### 3b. 安装 DreamerV3（必须用 editable 模式）/ Install DreamerV3 (editable mode required)
+
+**不要**用 `pip install git+...` 安装 DreamerV3：该 fork 构建 wheel 时会丢掉 `embodied/`
+子包和 `configs.yaml`，导致 `ImportError: cannot import name 'embodied' from 'dreamerv3'`。
+
+必须从源码用 editable 模式安装：
+
+```bash
+cd ~
+git clone https://github.com/Pippo809/dreamerv3.git dreamerv3_src
+cd dreamerv3_src
+git checkout d7cab46          # requirements-server.txt 钉的 commit
+pip install -e .              # 自动补 tensorflow-cpu / optax / ruamel.yaml / rich / crafter
+cd ~/worldmodel              # 回到项目目录
+```
+
+editable 安装会把源码目录直接挂到 Python path 上，`embodied/` 和 `configs.yaml` 物理存在，
+彻底绕开 wheel 打包丢文件的问题；同时它会拉取 dreamerv3 自己的依赖，但**不会动**
+requirements-server.txt 里已经装好的 CUDA jax。
+
 ### 4. 验证安装 / Verify Installation
 
 ```bash
@@ -31,23 +51,19 @@ pip install -r requirements-server.txt
 python -c "import torch; print('PyTorch CUDA:', torch.cuda.is_available())"
 python -c "import jax; print('JAX devices:', jax.devices())"
 
-# 检查DreamerV3安装
-python -c "import dreamerv3; print('DreamerV3 OK')"
+# 检查DreamerV3安装（用训练脚本里完全相同的 import 链）
+python -c "from dreamerv3 import embodied; from dreamerv3.embodied.envs import from_gym, from_dm, atari; print('DreamerV3 + embodied OK')"
 ```
 
-**Troubleshooting**: 如果 `import dreamerv3` 失败并提示 `configs.yaml` 缺失，这是Pippo809 fork的已知问题。检查：
+**Troubleshooting**: 如果 `from dreamerv3 import embodied` 失败（`cannot import name 'embodied'`
+或 `configs.yaml` 缺失），说明 dreamerv3 是用 `git+`/wheel 方式装的、打包不完整。按上面
+**步骤 3b** 改用 editable 安装即可。诊断当前安装是否完整：
 
 ```bash
-python -c "import dreamerv3; print(dreamerv3.__file__)"
-# 输出类似: /path/to/site-packages/dreamerv3/__init__.py
-# 检查该目录下是否有 configs.yaml
+python -c "import dreamerv3, os; d=os.path.dirname(dreamerv3.__file__); print('位置:', d); print('有embodied目录:', os.path.isdir(os.path.join(d,'embodied'))); print('有configs.yaml:', os.path.isfile(os.path.join(d,'configs.yaml')))"
 ```
 
-如果缺失，从源码手动复制：
-```bash
-git clone https://github.com/Pippo809/dreamerv3.git /tmp/dreamerv3
-cp /tmp/dreamerv3/dreamerv3/configs.yaml $(python -c "import dreamerv3, os; print(os.path.dirname(dreamerv3.__file__))")
-```
+两项都应为 `True`。若为 `False`，先 `pip uninstall -y dreamerv3` 再执行步骤 3b。
 
 ### 5. 运行训练 / Run Training
 
@@ -190,7 +206,11 @@ num_envs = 4  # 或更少
 
 ### 4. DreamerV3 import 失败
 
-参见上面"验证安装"部分的 troubleshooting。
+**症状**: `ImportError: cannot import name 'embodied' from 'dreamerv3'` 或 `configs.yaml` 缺失
+
+**原因**: dreamerv3 用 `pip install git+...` 安装时 wheel 打包不完整，丢了 `embodied/` 子包。
+
+**解决**: 改用 editable 安装，参见 **步骤 3b** 和"验证安装"部分的 troubleshooting。
 
 ## 文件说明 / File Reference
 

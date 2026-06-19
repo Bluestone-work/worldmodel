@@ -14,8 +14,14 @@ gymnasium==1.2.3
 gym==0.19.0  # legacy envs still use old gym
 
 # DreamerV3 (forked for hybrid action spaces)
-# NOTE: if `import dreamerv3` fails on missing configs.yaml, see CLAUDE.md
-git+https://github.com/Pippo809/dreamerv3.git@d7cab46
+# DO NOT install via `git+...` here: the wheel build drops the `embodied/`
+# subpackage and `configs.yaml`, causing `ImportError: cannot import name
+# 'embodied' from 'dreamerv3'`. Install it in EDITABLE mode from a source
+# clone instead (see SERVER_SETUP.md "DreamerV3 安装"):
+#   git clone https://github.com/Pippo809/dreamerv3.git ~/dreamerv3_src
+#   cd ~/dreamerv3_src && git checkout d7cab46 && pip install -e .
+# The editable install also pulls dreamerv3's own deps (tensorflow-cpu, optax,
+# ruamel.yaml, rich, crafter) without disturbing the CUDA jax pinned below.
 
 # Deep learning backends
 torch==2.0.1  # upgraded from 1.13.1 for CUDA 12 / JAX 0.6 compatibility
@@ -23,6 +29,7 @@ torchvision==0.15.2
 jax==0.6.2
 jax-cuda12-plugin==0.6.2
 tensorflow-probability==0.25.0
+tensorflow-cpu==2.21.0  # required at runtime by dreamerv3 TensorBoardOutput logger
 
 # Vision & image processing
 opencv-python==4.13.0.92
