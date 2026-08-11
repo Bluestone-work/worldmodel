@@ -1,0 +1,30 @@
+{
+  "goal": "Determine which adjustment best improves bifurcation two-clot vascular swarm navigation",
+  "status": "junction_and_curriculum_check_complete",
+  "base_commit": "a2e8838f2f688b3e6d47721f2b8ac9545fd3dc8a",
+  "experiment_summary": {
+    "baseline_two_clot_8_updates": {
+      "success_rate": 0.0,
+      "removal_rate": 0.5,
+      "first_contact_step": 95.0
+    },
+    "junction_shaped_two_clot_32_updates": {
+      "success_rate": 0.0,
+      "removal_rate": 0.5,
+      "first_contact_step": 44.8,
+      "collision_rate": 0.375
+    },
+    "one_clot_8_updates": {
+      "success_rate": 1.0,
+      "removal_rate": 1.0,
+      "first_contact_step": 105.6
+    },
+    "transfer_one_clot_to_two_clot_32_updates": {
+      "success_rate": 0.0,
+      "removal_rate": 0.5,
+      "first_contact_step": 52.4
+    }
+  },
+  "interpretation": "Generic junction reward and one-clot curriculum are insufficient. The policy needs explicit topology memory or branch-switch supervision to solve the two-clot bifurcation task.",
+  "next_hop": "implement_explicit_branch_memory_or_topology_recurrent_policy_and_retest_two_clot_bifurcation"
+}

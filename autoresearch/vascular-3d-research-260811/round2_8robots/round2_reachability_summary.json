@@ -1,0 +1,54 @@
+[
+  {
+    "scenario": "bifurcation",
+    "controller": "forward_cohesive_m1",
+    "episodes": 5,
+    "success_rate": 0.0,
+    "removal_rate": 0.5,
+    "remaining_mass": 1.0,
+    "first_contact_step": 47.0,
+    "returned_to_junction_rate": 1.0,
+    "max_branches_occupied": 1.2,
+    "collision_rate": 0.290825,
+    "steps": 1000.0
+  },
+  {
+    "scenario": "bifurcation",
+    "controller": "forward_split_m-1",
+    "episodes": 5,
+    "success_rate": 0.0,
+    "removal_rate": 0.4,
+    "remaining_mass": 1.2,
+    "first_contact_step": 47.25,
+    "returned_to_junction_rate": 0.8,
+    "max_branches_occupied": 1.8,
+    "collision_rate": 0.3407,
+    "steps": 1000.0
+  },
+  {
+    "scenario": "bifurcation",
+    "controller": "greedy_euclidean_m1",
+    "episodes": 5,
+    "success_rate": 0.0,
+    "removal_rate": 0.5,
+    "remaining_mass": 1.0,
+    "first_contact_step": 42.0,
+    "returned_to_junction_rate": 1.0,
+    "max_branches_occupied": 1.6,
+    "collision_rate": 0.239975,
+    "steps": 1000.0
+  },
+  {
+    "scenario": "bifurcation",
+    "controller": "topology_oracle",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "removal_rate": 1.0,
+    "remaining_mass": 0.0,
+    "first_contact_step": 41.0,
+    "returned_to_junction_rate": 1.0,
+    "max_branches_occupied": 1.0,
+    "collision_rate": 0.0,
+    "steps": 112.4
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "update": 1,
+    "mean_reward": 0.0,
+    "mean_length": 0.0,
+    "n_episodes": 0,
+    "policy_loss": -0.004579680040478706,
+    "value_loss": 0.0008685036154929549,
+    "entropy": 4.256965637207031
+  }
+]

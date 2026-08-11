@@ -1,0 +1,39 @@
+{
+  "scenario": "bifurcation",
+  "episodes": 5,
+  "summary": {
+    "flow_only": {
+      "('success', 'mean')": 0.0,
+      "('success', 'std')": 0.0,
+      "('removal_rate', 'mean')": 0.5,
+      "('removal_rate', 'std')": 0.0,
+      "('steps', 'mean')": 300.0,
+      "('collision_rate', 'mean')": 0.0,
+      "('known_fraction', 'mean')": 0.79346,
+      "('path_length', 'mean')": 10.46107,
+      "('first_contact_step', 'mean')": 232.6
+    },
+    "greedy": {
+      "('success', 'mean')": 0.0,
+      "('success', 'std')": 0.0,
+      "('removal_rate', 'mean')": 0.4,
+      "('removal_rate', 'std')": 0.22361,
+      "('steps', 'mean')": 300.0,
+      "('collision_rate', 'mean')": 0.0,
+      "('known_fraction', 'mean')": 0.79477,
+      "('path_length', 'mean')": 44.42462,
+      "('first_contact_step', 'mean')": 202.8
+    },
+    "random": {
+      "('success', 'mean')": 0.0,
+      "('success', 'std')": 0.0,
+      "('removal_rate', 'mean')": 0.5,
+      "('removal_rate', 'std')": 0.0,
+      "('steps', 'mean')": 300.0,
+      "('collision_rate', 'mean')": 0.0,
+      "('known_fraction', 'mean')": 0.80915,
+      "('path_length', 'mean')": 42.16789,
+      "('first_contact_step', 'mean')": 240.0
+    }
+  }
+}

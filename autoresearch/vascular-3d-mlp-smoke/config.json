@@ -1,0 +1,13 @@
+{
+  "scenario": "bifurcation",
+  "model": "mlp",
+  "robots": 6,
+  "updates": 1,
+  "steps_per_update": 16,
+  "epochs": 1,
+  "batch_size": 8,
+  "eval_episodes": 1,
+  "seed": 20260811,
+  "device": "cpu",
+  "output": "autoresearch/vascular-3d-mlp-smoke"
+}

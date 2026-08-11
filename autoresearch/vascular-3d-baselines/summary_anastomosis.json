@@ -1,0 +1,36 @@
+{
+  "scenario": "anastomosis",
+  "episodes": 1,
+  "summary": {
+    "flow_only": {
+      "('success', 'mean')": 1.0,
+      "('success', 'std')": null,
+      "('removal_rate', 'mean')": 1.0,
+      "('removal_rate', 'std')": null,
+      "('steps', 'mean')": 282.0,
+      "('collision_rate', 'mean')": 0.0,
+      "('known_fraction', 'mean')": 0.52907,
+      "('path_length', 'mean')": 29.27502
+    },
+    "greedy": {
+      "('success', 'mean')": 0.0,
+      "('success', 'std')": null,
+      "('removal_rate', 'mean')": 0.0,
+      "('removal_rate', 'std')": null,
+      "('steps', 'mean')": 300.0,
+      "('collision_rate', 'mean')": 0.0,
+      "('known_fraction', 'mean')": 0.38372,
+      "('path_length', 'mean')": 129.96309
+    },
+    "random": {
+      "('success', 'mean')": 1.0,
+      "('success', 'std')": null,
+      "('removal_rate', 'mean')": 1.0,
+      "('removal_rate', 'std')": null,
+      "('steps', 'mean')": 293.0,
+      "('collision_rate', 'mean')": 0.0,
+      "('known_fraction', 'mean')": 0.68023,
+      "('path_length', 'mean')": 117.17257
+    }
+  }
+}

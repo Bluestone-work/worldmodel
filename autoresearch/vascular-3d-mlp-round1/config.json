@@ -1,0 +1,13 @@
+{
+  "scenario": "bifurcation",
+  "model": "mlp",
+  "robots": 8,
+  "updates": 8,
+  "steps_per_update": 128,
+  "epochs": 2,
+  "batch_size": 64,
+  "eval_episodes": 5,
+  "seed": 20260811,
+  "device": "cuda",
+  "output": "autoresearch/vascular-3d-mlp-round1"
+}

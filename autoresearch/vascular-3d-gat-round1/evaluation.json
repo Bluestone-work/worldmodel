@@ -1,0 +1,67 @@
+{
+  "success_rate": 0.0,
+  "removal_rate": 0.5,
+  "remaining_mass": 1.0,
+  "mean_steps": 300.0,
+  "mean_reward": 7.358687741756448,
+  "collision_rate": 0.0,
+  "known_fraction": 0.7869281045751634,
+  "first_contact_step": 180.0,
+  "episodes": [
+    {
+      "seed": 20360811,
+      "success": 0.0,
+      "removal_rate": 0.5,
+      "remaining_mass": 1.0,
+      "steps": 300,
+      "total_reward": 7.270446966290492,
+      "collision_rate": 0.0,
+      "known_fraction": 0.7843137254901961,
+      "first_contact_step": 177
+    },
+    {
+      "seed": 20360812,
+      "success": 0.0,
+      "removal_rate": 0.5,
+      "remaining_mass": 1.0,
+      "steps": 300,
+      "total_reward": 7.462427350580715,
+      "collision_rate": 0.0,
+      "known_fraction": 0.7843137254901961,
+      "first_contact_step": 187
+    },
+    {
+      "seed": 20360813,
+      "success": 0.0,
+      "removal_rate": 0.5,
+      "remaining_mass": 1.0,
+      "steps": 300,
+      "total_reward": 7.975130910873376,
+      "collision_rate": 0.0,
+      "known_fraction": 0.7908496732026143,
+      "first_contact_step": 187
+    },
+    {
+      "seed": 20360814,
+      "success": 0.0,
+      "removal_rate": 0.5,
+      "remaining_mass": 1.0,
+      "steps": 300,
+      "total_reward": 7.073918631970903,
+      "collision_rate": 0.0,
+      "known_fraction": 0.7908496732026143,
+      "first_contact_step": 173
+    },
+    {
+      "seed": 20360815,
+      "success": 0.0,
+      "removal_rate": 0.5,
+      "remaining_mass": 1.0,
+      "steps": 300,
+      "total_reward": 7.011514849066756,
+      "collision_rate": 0.0,
+      "known_fraction": 0.7843137254901961,
+      "first_contact_step": 176
+    }
+  ]
+}

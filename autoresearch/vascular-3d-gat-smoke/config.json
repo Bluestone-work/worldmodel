@@ -1,0 +1,12 @@
+{
+  "scenario": "bifurcation",
+  "robots": 6,
+  "updates": 2,
+  "steps_per_update": 32,
+  "epochs": 1,
+  "batch_size": 16,
+  "eval_episodes": 2,
+  "seed": 20260811,
+  "device": "cpu",
+  "output": "autoresearch/vascular-3d-gat-smoke"
+}

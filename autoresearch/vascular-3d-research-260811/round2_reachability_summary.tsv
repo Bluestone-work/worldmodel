@@ -1,0 +1,9 @@
+scenario	controller	episodes	success_rate	removal_rate	remaining_mass	first_contact_step	returned_to_junction_rate	max_branches_occupied	collision_rate	steps
+anastomosis	forward_cohesive_m1	5	1.0	1.0	0.0	105.8	0.0	2.0	0.18058884823185672	110.2
+anastomosis	forward_split_m-1	5	1.0	1.0	0.0	95.6	0.0	2.6	0.20116700149428982	102.8
+anastomosis	greedy_euclidean_m1	5	1.0	1.0	0.0	39.8	0.0	1.2	0.0322263356562137	41.6
+anastomosis	topology_oracle	5	1.0	1.0	0.0	39.0	0.0	1.0	0.0	41.0
+bifurcation	forward_cohesive_m1	5	0.0	0.4	1.2	47.25	0.8	1.6	0.32425625	1000.0
+bifurcation	forward_split_m-1	5	0.0	0.5	1.0	56.6	0.6	1.8	0.3340875	1000.0
+bifurcation	greedy_euclidean_m1	5	0.0	0.5	1.0	42.0	1.0	1.0	0.24119375000000004	1000.0
+bifurcation	topology_oracle	5	1.0	1.0	0.0	41.0	1.0	1.4	0.0	101.8

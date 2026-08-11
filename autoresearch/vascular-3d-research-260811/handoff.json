@@ -1,0 +1,35 @@
+{
+  "goal": "Bridge DGR-VDS-style partial-observation graph navigation to 3D vascular swarm thrombolysis",
+  "status": "round2_reachability_diagnosis_complete",
+  "base_commit": "a2e8838f2f688b3e6d47721f2b8ac9545fd3dc8a",
+  "article": {
+    "title": "Autonomous navigation of intelligent microrobotic swarms in unknown environments",
+    "doi": "10.1038/s42256-026-01252-6",
+    "journal": "Nature Machine Intelligence",
+    "year": 2026
+  },
+  "dgr_vds_commit": "c150c21f3f64dc68174dc32a3f9c44870ead83ac",
+  "verification": {
+    "direct_tests": "passed",
+    "py_compile": "passed",
+    "pytest": "unavailable"
+  },
+  "round2": {
+    "diagnostic_script": "scripts/diagnose_vascular_reachability.py",
+    "results": [
+      "autoresearch/vascular-3d-research-260811/round2_reachability_results.tsv",
+      "autoresearch/vascular-3d-research-260811/round2_reachability_summary.tsv",
+      "autoresearch/vascular-3d-research-260811/round2_reachability_summary.json",
+      "autoresearch/vascular-3d-research-260811/round2_reachability.md",
+      "autoresearch/vascular-3d-research-260811/round2_8robots/round2_reachability_summary.json"
+    ],
+    "key_result": {
+      "bifurcation_topology_oracle_success_rate": 1.0,
+      "bifurcation_topology_oracle_success_rate_8robots": 1.0,
+      "bifurcation_greedy_success_rate": 0.0,
+      "anastomosis_simple_controller_success_rate": 1.0
+    },
+    "interpretation": "The bifurcation two-clot task is reachable with the shared actuator if the controller uses vascular centerline topology. Simple Euclidean or forward controllers still fail, so the learning target is topology memory and branch commitment, not basic physical reachability. The current anastomosis task is too easy for the main claim."
+  },
+  "next_hop": "implement_topology_memory_or_recurrent_gat_treatment_then_train_bifurcation_two_clot_against_oracle_upper_bound"
+}

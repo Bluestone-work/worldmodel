@@ -1,0 +1,39 @@
+{
+  "goal": "Assess whether a 3-D vascular GAT policy can clear bifurcation clots with shared actuator control",
+  "status": "history_action_feasibility_check_complete",
+  "base_commit": "a2e8838f2f688b3e6d47721f2b8ac9545fd3dc8a",
+  "article": {
+    "title": "Autonomous navigation of intelligent microrobotic swarms in unknown environments",
+    "doi": "10.1038/s42256-026-01252-6",
+    "journal": "Nature Machine Intelligence",
+    "year": 2026
+  },
+  "experiment": {
+    "scenario": "bifurcation",
+    "robots": 8,
+    "clots": 2,
+    "distance_reward_scale": 1.0,
+    "updates": 8,
+    "steps_per_update": 128,
+    "epochs": 2,
+    "batch_size": 64,
+    "eval_episodes": 5,
+    "history_actions": 3
+  },
+  "results": {
+    "baseline_gat": {
+      "success_rate": 0.0,
+      "removal_rate": 0.5,
+      "first_contact_step": 95.0,
+      "collision_rate": 0.2
+    },
+    "history_gat": {
+      "success_rate": 0.0,
+      "removal_rate": 0.4,
+      "first_contact_step": 139.0,
+      "collision_rate": 0.0
+    }
+  },
+  "interpretation": "Generic short action history did not improve the bifurcation two-clot task. The task still looks feasible in principle because the topology oracle solves it, but the learned policy likely needs explicit topology memory or branch-switch supervision.",
+  "next_hop": "implement_explicit_branch_memory_or_topology_recurrent_policy_then_compare_against_oracle_upper_bound"
+}

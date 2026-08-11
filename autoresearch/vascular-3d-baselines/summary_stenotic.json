@@ -1,0 +1,36 @@
+{
+  "scenario": "stenotic",
+  "episodes": 1,
+  "summary": {
+    "flow_only": {
+      "('success', 'mean')": 1.0,
+      "('success', 'std')": null,
+      "('removal_rate', 'mean')": 1.0,
+      "('removal_rate', 'std')": null,
+      "('steps', 'mean')": 135.0,
+      "('collision_rate', 'mean')": 0.0,
+      "('known_fraction', 'mean')": 0.64,
+      "('path_length', 'mean')": 13.64678
+    },
+    "greedy": {
+      "('success', 'mean')": 1.0,
+      "('success', 'std')": null,
+      "('removal_rate', 'mean')": 1.0,
+      "('removal_rate', 'std')": null,
+      "('steps', 'mean')": 216.0,
+      "('collision_rate', 'mean')": 0.0,
+      "('known_fraction', 'mean')": 0.47,
+      "('path_length', 'mean')": 93.89981
+    },
+    "random": {
+      "('success', 'mean')": 1.0,
+      "('success', 'std')": null,
+      "('removal_rate', 'mean')": 1.0,
+      "('removal_rate', 'std')": null,
+      "('steps', 'mean')": 199.0,
+      "('collision_rate', 'mean')": 0.0,
+      "('known_fraction', 'mean')": 0.64,
+      "('path_length', 'mean')": 80.46137
+    }
+  }
+}

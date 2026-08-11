@@ -1,0 +1,16 @@
+{
+  "scenario": "bifurcation",
+  "model": "gat",
+  "robots": 8,
+  "clots": 2,
+  "distance_reward_scale": 1.0,
+  "history_actions": 3,
+  "updates": 8,
+  "steps_per_update": 128,
+  "epochs": 2,
+  "batch_size": 64,
+  "eval_episodes": 5,
+  "seed": 20260811,
+  "device": "cuda",
+  "output": "autoresearch/vascular-3d-history-260811/gat_hist3"
+}

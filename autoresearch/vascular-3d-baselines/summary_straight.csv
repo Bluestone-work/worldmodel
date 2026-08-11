@@ -1,0 +1,6 @@
+,success,success,removal_rate,removal_rate,steps,collision_rate,known_fraction,path_length
+,mean,std,mean,std,mean,mean,mean,mean
+controller,,,,,,,,
+flow_only,1.0,,1.0,,134.0,0.0,0.6375,13.5492
+greedy,0.0,,0.5,,300.0,0.0,0.25,127.6621
+random,1.0,,1.0,,168.0,0.0,0.6625,68.73098

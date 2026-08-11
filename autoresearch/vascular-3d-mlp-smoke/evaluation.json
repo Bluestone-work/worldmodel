@@ -1,0 +1,23 @@
+{
+  "success_rate": 0.0,
+  "removal_rate": 0.5,
+  "remaining_mass": 1.0,
+  "mean_steps": 300.0,
+  "mean_reward": 6.968120177984256,
+  "collision_rate": 0.0,
+  "known_fraction": 0.7777777777777778,
+  "first_contact_step": 202.0,
+  "episodes": [
+    {
+      "seed": 20360811,
+      "success": 0.0,
+      "removal_rate": 0.5,
+      "remaining_mass": 1.0,
+      "steps": 300,
+      "total_reward": 6.968120177984256,
+      "collision_rate": 0.0,
+      "known_fraction": 0.7777777777777778,
+      "first_contact_step": 202
+    }
+  ]
+}
